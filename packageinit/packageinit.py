@@ -51,7 +51,6 @@ def create_init_file_in_dir(dir_path, starred=False):
         with open(init_path) as f:
             lines = f.read().splitlines()
             add_lines = lines[get_end_of_import_section(lines) :]
-            print(add_lines)
 
     to_import = [
         os.path.splitext(x)[0]

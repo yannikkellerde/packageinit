@@ -15,7 +15,7 @@ setup(
     description="",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/yannikkellerde/autoinit",
+    url="https://github.com/yannikkellerde/packageinit",
     author="Yannik Keller",
     author_email="yannik@kelnet.de",
     license="MIT",
@@ -24,7 +24,9 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
     ],
-    packages=["autoinit"],
+    packages=["packageinit"],
     include_package_data=True,
-    entry_points={"console_scripts": ["autoinit=autoinit.autoinit:command_line_run"]},
+    entry_points={
+        "console_scripts": ["packageinit=packageinit.packageinit:command_line_run"]
+    },
 )
