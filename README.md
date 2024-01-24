@@ -29,12 +29,12 @@ from test_repo.util import dom_loader, special_gather, rolling_window, list_rind
 Alternatively, clone this repo and install with `pip install -e .`
 ## Usage
 ### Individual import mode
-`autoinit project_folder`. This will create `__init__.py` in each `project_folder` and each subfolder that contains `.py` files. Each `__init__.py` file will import all methods, classes, constants and variables defined in each `.py` file of its folders via relative import.
+`packageinit project_folder`. This will create `__init__.py` in each `project_folder` and each subfolder that contains `.py` files. Each `__init__.py` file will import all methods, classes, constants and variables defined in each `.py` file of its folders via relative import.
 
 **Warning**: This may overwrite exisiting `__init__.py` files. It tries to preserve anything not import related in existing `__init__.py` files, but that only works if they come after the imports.
 **Warning**: For this to work, all imports in your .py files have to be at the top of your files.
 **Warning**: All `.py` files in your `project_folder` have to be importable without error for this to work.
 
 ### Starred mode
-`autoinit project_folder --starred`. This will create `__init__.py` in each `project_folder` and each subfolder that contains `.py` files. Each `__init__.py` file include `from .yourfilename import *` for each `.py` file in it's folder.
+`packageinit project_folder --starred`. This will create `__init__.py` in each `project_folder` and each subfolder that contains `.py` files. Each `__init__.py` file include `from .yourfilename import *` for each `.py` file in it's folder.
 **Warning**: Importing using `*` may result in cylclic imports depending on the rest of your import structure in the code.
