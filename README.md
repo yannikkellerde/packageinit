@@ -1,7 +1,7 @@
 # Automatically create __init__.py files for your whole project
 ![](packageinit.gif)
 ## Motivation
-Let's say I have this python project structure (And you installed test_repo into your python environment)
+Let's say you have this python project structure (And you installed test_repo into your python environment)
 ```
 test_repo/
 ├── backend
@@ -13,7 +13,7 @@ test_repo/
     ├── python_util.py
     └── torch_util.py
 ```
-Now when I want to import a lot of utilities in `server.py`, I'll have to write
+Now when you want to import a lot of utilities in `server.py`, you'll have to write
 ```python
 from test_repo.util.dom_util import dom_loader
 from test_repo.util.numpy_util import special_gather
