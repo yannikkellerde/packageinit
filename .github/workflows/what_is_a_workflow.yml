@@ -20,9 +20,8 @@ jobs:
           python-version: '3.9'
       - name: Install Python dependencies
         run: python -m pip install --upgrade pip setuptools
-      - name: Change directory
-        working-directory: $GITHUB_WORKSPACE
       - name: Build Source and Wheel Distributions
+        working-directory: $GITHUB_WORKSPACE
         run: python setup.py sdist bdist_wheel
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
